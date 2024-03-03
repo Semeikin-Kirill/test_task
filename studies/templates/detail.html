@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        {% for lesson in lessons %}
+          <div class="feature col">
+            <h2>{{lesson.title}}</h2>
+            <a href="{{lesson.video_link}}" class="icon-link">
+                Watch video
+              <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+            </a>
+          </div>
+    {% endfor %}
+      </div>
+</div>
+{% endblock %}
